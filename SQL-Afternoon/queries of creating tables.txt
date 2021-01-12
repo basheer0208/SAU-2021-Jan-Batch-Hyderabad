@@ -1,0 +1,32 @@
+product table creation:
+
+ create table product(product_id int primary key,product_name varchar(20) not null,unit_price int(10) not null);
+ table created.
+ insert into product values(101,'a',100);
+
+
+catagory table creation;
+   create table catagory(catagory_code int primary key,catagory_name varchar(20) not null,product_id int,foreign key(product_id) references product(product_id));
+   insert into catagory values(1,'AA',101);
+
+location table
+   create table location(location_code varchar(20) primary key,location_name varchar(50) not null);
+    insert into location values('11113','bangalore');
+
+executive table
+   create table executive_sales(executive_id int primary key,name varchar(20) not null,dob int not null,pno int(10) not null,gender varchar(1) not null,saled int not null,location_code varchar(20),foreign key(location_code) references location(location_code));
+   insert into executive_sales values(1,'abc',2000,1234567891,'M',3,'11111');
+Query OK, 1 row affected (0.01 sec)
+
+
+customer table
+	create table customer(customer_id int primary key,customer_name varchar(20) not null,dob date not null,pno integer(10) not null,gender varchar(1) not null,location_code varchar(20) ,foreign key(location_code) references location(location_code));
+	insert into customer values(11,'basheer',02-08-2000,12334567899,'M','11111');
+
+create table  purchase
+
+	create table purchase(purchase_id int primary key,product_id int,customer_id int,executive_id int,units_sold int not null,date_of_purchase date not null,foreign key(product_id) references product(product_id),foreign key(customer_id) references customer(customer_id),foreign key(executive_id) references executive_sales(executive_id));
+	insert into purchase values(111,102,12,2,4,2000/08/01);
+
+select * from purchase;   
+
