@@ -1,0 +1,30 @@
+<html>
+	<head>
+		Adding of two numbers
+	<br><br>
+	</head>
+
+	<body style="background-color:powderblue;">
+
+    
+            Enter First Number : <br>
+            <input type="text" id="fval"><br>
+
+            Enter Second Number : <br>
+            <input type="text" id="sval"><br>
+  
+            <button onclick="add()">add</button><br>
+	    Result is:<span id="ans"></span>
+
+	</body>
+        <script> 
+	function add()
+{
+	var a=parseInt(document.getElementById("fval").value);
+	var b=parseInt(document.getElementById("sval").value);
+	var result=a+b;
+	document.getElementById("ans").innerHTML=result;
+}
+</script>
+
+</html>
