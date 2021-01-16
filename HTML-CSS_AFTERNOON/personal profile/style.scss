@@ -1,0 +1,81 @@
+$primary-color:#FF3393;
+// $primary-color:#9437ff;
+$secondary-color:#9437ff;
+$hover:#9437ff69;
+body{
+    background-color: grey;
+}
+.container{
+    // border: 1px solid black;
+    overflow: hidden;
+}
+.main-section{
+    .title{
+        text-align: center;
+        h1{
+            border-bottom: 2px solid black;
+            color: $primary-color;
+        }
+        .caption{
+            color: $secondary-color;
+        }
+    }
+    .sub-title{
+        color: $secondary-color;
+    }
+    .section-title{
+        color: $primary-color;
+        .desc{
+            text-align: justify;
+        }
+    }
+    .image{
+        background-image: url('man.jpeg');
+        background-repeat: no-repeat;
+        background-size: 119%;
+        background-position: -15px -20px;
+        height: 270px;
+        width: 250px;
+        border-radius: 9%;
+        .back-drop{
+            transition: all 0.5s;
+            overflow: hidden;
+            position: absolute;
+            top: 180px;
+            right: 143px;
+            background-color: $primary-color;
+            width: 270px;
+            height: 300px;
+            border-radius: 10%;
+            transform: rotate(4deg);
+            z-index: -1;
+        }
+    }
+    .image:hover {
+        .back-drop{
+            cursor: pointer;
+            transform: rotate(-4deg);
+        }
+    }
+    .skills{
+        .skill-name{
+            margin-left: 150px;
+            p:hover{
+                cursor: pointer;
+                border-bottom: 1px solid $secondary-color;
+            }
+        }
+    }
+    .table{
+        width: 700px;
+        tbody{
+            tr:hover{
+                background-color: $hover;
+            }
+        }
+    }
+    .project-skills{
+        margin: 0 auto;
+        width: 500px;
+    }
+}
