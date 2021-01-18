@@ -1,0 +1,8 @@
+{
+  "devToolsPort": 19004,
+  "expoServerPort": 19005,
+  "packagerPort": 19005,
+  "expoServerNgrokUrl": "https://zf-jvz.anonymous.my-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.zf-jvz.anonymous.my-app.exp.direct",
+  "ngrokPid": 9020
+}
