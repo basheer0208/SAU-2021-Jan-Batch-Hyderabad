@@ -1,0 +1,10 @@
+<h1>Form in angular</h1>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <h3>Enter email</h3>
+  <input type="text" name="email" ngModel> <br><br>
+  <h3>Enter address</h3>
+  <input type="text" name="address" ngModel> <br><br>
+  <h3>Enter contact</h3>
+  <input type="text" name="contact" ngModel> <br><br>
+  <button type="submit">submit</button>
+</form>
